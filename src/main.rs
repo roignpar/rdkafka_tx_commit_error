@@ -17,10 +17,13 @@ fn main() -> KafkaResult<()> {
     let prod: ThreadedProducer<_> = config.create()?;
 
     prod.init_transactions(Timeout::Never)?;
+    log::info!("Init transactions successful");
 
     prod.begin_transaction()?;
+    log::info!("Begin transaction successful");
 
     prod.commit_transaction(Timeout::Never)?;
+    log::info!("Commit transaction successful");
 
     Ok(())
 }

@@ -8,4 +8,5 @@ edition = "2018"
 
 [dependencies]
 env_logger = "0.8.3"
+log = "0.4.14"
 rdkafka = "0.25.0"
